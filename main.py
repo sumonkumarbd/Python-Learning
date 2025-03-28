@@ -169,8 +169,6 @@ if not nominiAge <= minmumAge and hasPermision:
 else:
     print("Sorry, You're not meet the minimum citeria of membership rulls.")
 
-""" #Multiple Comment Finnished
-
 
 ### Comparision Oparator ###
 a = 5
@@ -182,4 +180,52 @@ print(a > b)    # Greater than      → False
 print(a < b)    # Less than         → True
 print(a >= b)   # Greater than or equal to → False
 print(a <= b)   # Less than or equal to   → True
+
+""" #Multiple Comment Finnished
+
+### List ###
+## Charecterstick of List
+# - Order
+# - Mutable
+# - Allow duplicates
+# - Heterogeneous
+# - Dynamic size
+
+## List Methods
+# - append() Adds an element to the end of the list
+# - insert() Inserts an element at a specified position
+# - extend() Extend the list by adding elements from another list
+# - remove() Removes the first occurrence of the specified element
+# - pop() Last element slice and returns it
+# - clear() Removes all elements from the list
+# - index() Returns the index of the first occurrence of the specified element
+# - count() Returns the number of occurrences of specified element
+# - sort() Sort the list in Assending order
+# - reverse() reverse the list in Dessending order of a Sort list
+# - len() Counting the size of list
+# - list[3:5] list slicing
+
+cities_part1 = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "London", "Paris"]
+cities_part2 = ["Berlin", "Tokyo", "Beijing", "Dhaka", "Mumbai", "Delhi", "Sydney", "Sydney"]
+
+# add_city = cities_part1.append("Honnoy")
+# insert_city = cities_part1.insert(4,"Dubai")
+# cities_part1.extend(cities_part2)
+# cities_part1.remove("Los Angeles")
+# cityinpop = cities_part1.pop(2)
+# print(cityinpop)
+# cities_part1.clear()
+# getIndex = cities_part1.index("Chicago")
+# print(getIndex)
+# element_count = cities_part2.count("Sydney")
+# print(element_count)
+# cities_part1.sort()
+# cities_part1.reverse()
+# slice_list = cities_part1[2:5]
+# print(slice_list)
+print(cities_part1)
+# print(cities_part1)
+
+
+
 
