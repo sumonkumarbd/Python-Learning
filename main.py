@@ -85,7 +85,7 @@ print(math.gcd(num1,num2)) #Losagu
 print(math.lcm(num1,num2)) #Gosagu
 
 
-""" #Multiple Comment Finnished
+### if-else ###
 # if elase statement
 val = False
 if  val:
@@ -103,3 +103,32 @@ if val:
         print("Veriable type is not Boolian")
 else:
     print("The Veriable 'val' is False")
+
+""" #Multiple Comment Finnished
+
+###Loop###
+fruitsList = ["Apple", "Bananna", "Pine Apple", "Cherry", "Coconut"]
+examResult = {
+    "Bangla": 85,
+    "English": 95,
+    "Math": 88,
+    "History": 69,
+    "Social Education": 98
+}
+#for Loop
+#example 1
+for eachItem in fruitsList:
+    print(eachItem)
+
+print("\n") #for new line
+
+#exmaple 2
+for subject,marks in examResult.items():
+    print("{}:{}".format(subject,marks))
+
+print("\n") #for new Line
+#example for break and continue in loop
+for num in range(10):
+    if num == 5:
+        break
+    print(num)
