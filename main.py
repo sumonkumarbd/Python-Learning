@@ -104,7 +104,6 @@ if val:
 else:
     print("The Veriable 'val' is False")
 
-""" #Multiple Comment Finnished
 
 ###Loop###
 fruitsList = ["Apple", "Bananna", "Pine Apple", "Cherry", "Coconut"]
@@ -156,3 +155,18 @@ while index<len(subject):
 
 print("\nNote for Loop")
 print("In python, there are for and while loops, but there is no direct equivalent to the do-while loop found in some other programming language syntax specifically like in JavaScript")
+
+""" #Multiple Comment Finnished
+
+
+### Logical Oparators ###
+minmumAge = 18
+hasPermision = True
+nominiName = input("Enter Your Name: ")
+nominiAge = int(input("Enter Your Age: "))
+nominiHobby = input("Enter Your Hobby: ")
+
+if not nominiAge <= minmumAge and hasPermision:
+    print("Congratulation! You Are In the Club.")
+else:
+    print("Sorry, You're not meet the minimum citeria of membership rulls.")
