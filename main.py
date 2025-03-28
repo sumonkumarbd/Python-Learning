@@ -1,5 +1,14 @@
 import math
 
+###Oparator Prsidence###
+#Exponentiation (**)
+#Unary plus -> Unary minus -> Bitwise NOT (+x, -x, ~x)
+#Multiplication -> Division -> Floor division -> Modulus (*, /, //, %)
+#Addition -> Subtraction (+, -)
+#Bitwise shift (<<, >>) -> #Bitwise And (&) -> Bitwise XOR (^) -> Bitwise OR (|)
+#Comparisins -> Identy -> Membership (==, != , >, <, >=, <=, is, is not, in, not in)
+#Logical Not (not) -> Loagical AND (and) -> Logical OR (or)
+
 #Multiple Comment Start
 """
 
@@ -69,10 +78,17 @@ print(math.pi) #Constants
 print(math.e) #Constants
 
 
-#Gratest Common Divisor
+##Gratest Common Divisor
 num1 = 12
 num2 = 18
 print(math.gcd(num1,num2)) #Losagu
 print(math.lcm(num1,num2)) #Gosagu
 
+
 """ #Multiple Comment Finnished
+
+val = True
+if val:
+    print("yes")
+else: 
+    print("no")
