@@ -156,8 +156,6 @@ while index<len(subject):
 print("\nNote for Loop")
 print("In python, there are for and while loops, but there is no direct equivalent to the do-while loop found in some other programming language syntax specifically like in JavaScript")
 
-""" #Multiple Comment Finnished
-
 
 ### Logical Oparators ###
 minmumAge = 18
@@ -170,3 +168,18 @@ if not nominiAge <= minmumAge and hasPermision:
     print("Congratulation! You Are In the Club.")
 else:
     print("Sorry, You're not meet the minimum citeria of membership rulls.")
+
+""" #Multiple Comment Finnished
+
+
+### Comparision Oparator ###
+a = 5
+b = 10
+
+print(a == b)   # Equal to         → False
+print(a != b)   # Not equal to      → True
+print(a > b)    # Greater than      → False
+print(a < b)    # Less than         → True
+print(a >= b)   # Greater than or equal to → False
+print(a <= b)   # Less than or equal to   → True
+
