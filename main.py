@@ -1,5 +1,4 @@
 import math
-import os
 
 ###Oparator Prsidence###
 #Exponentiation (**)
@@ -381,9 +380,6 @@ def factorial(n):
 
 print(factorial(5))  # Output: 120
 
-""" #Multiple Comment Finnished
-
-
 ### File Handling ###
 ## Characteristics of File Handling
 # - Allows Reading and Writing Files
@@ -433,6 +429,62 @@ if os.path.exists("example.txt"):
     print("File deleted successfully!")
 else:
     print("File does not exist.")
+
+""" #Multiple Comment Finnished
+
+### Directory Handling ###
+## Characteristics of Directory Handling
+# - Helps in Managing Files and Folders
+# - Supports Creating, Renaming, and Deleting Directories
+# - Works with Paths Efficiently
+# - Useful for Organizing Large Data
+# - Helps in Automating File Operations
+
+import os
+
+# Creating a new directory
+dir_name = "my_directory"
+if not os.path.exists(dir_name):
+    os.mkdir(dir_name)
+    print(f"Directory '{dir_name}' created successfully!")
+
+# Creating a nested directory
+nested_dir = "parent_dir/child_dir"
+if not os.path.exists(nested_dir):
+    os.makedirs(nested_dir)  # Creates parent_dir and child_dir together
+    print(f"Nested Directory '{nested_dir}' created successfully!")
+
+# Listing files and directories in the current path
+print("List of files and directories:", os.listdir("."))
+
+# Renaming a directory
+new_name = "renamed_directory"
+if os.path.exists(dir_name):
+    os.rename(dir_name, new_name)
+    print(f"Directory renamed from '{dir_name}' to '{new_name}'")
+
+# Deleting an empty directory
+if os.path.exists(new_name):
+    os.rmdir(new_name)
+    print(f"Directory '{new_name}' deleted successfully!")
+
+# Deleting a directory with files
+import shutil
+if os.path.exists("parent_dir"):
+    shutil.rmtree("parent_dir")  # Removes a directory and its contents
+    print("Parent directory and its contents deleted.")
+
+## Some important directory handling methods
+# - os.mkdir() → Creates a directory
+# - os.makedirs() → Creates nested directories
+# - os.listdir() → Lists files and directories in a given path
+# - os.rename() → Renames a directory
+# - os.rmdir() → Removes an empty directory
+# - shutil.rmtree() → Removes a directory and all its contents
+
+print("Directory operations completed successfully!")
+
+
 
 
 
