@@ -1,4 +1,5 @@
 import math
+import os
 
 ###Oparator Prsidence###
 #Exponentiation (**)
@@ -312,7 +313,8 @@ for key, value in personDict.items():
 
 print(len(personDict))  # Number of key-value pairs
 
-""" #Multiple Comment Finnished
+
+
 
 ### Function ###
 ## Characteristics of Function
@@ -323,15 +325,15 @@ print(len(personDict))  # Number of key-value pairs
 # - Increases Readability
 
 def greet(name):
-    """Function to greet a person"""
+    # Function to greet a person
     print(f"Hello, {name}!")
 
 def add(a, b):
-    """Function to add two numbers"""
+    # Function to add two numbers
     return a + b
 
 def is_even(number):
-    """Function to check if a number is even"""
+    # Function to check if a number is even
     return number % 2 == 0
 
 print(add(5, 3))  # Output: 8
@@ -378,6 +380,59 @@ def factorial(n):
     return n * factorial(n - 1)
 
 print(factorial(5))  # Output: 120
+
+""" #Multiple Comment Finnished
+
+
+### File Handling ###
+## Characteristics of File Handling
+# - Allows Reading and Writing Files
+# - Supports Different Modes (r, w, a, r+)
+# - Works with Both Text and Binary Files
+# - Helps in Data Persistence
+# - Can Handle Large Data Efficiently
+
+# Writing to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, this is a file handling example.\n")
+    file.write("Python makes it easy to work with files.\n")
+
+# Reading from a file
+with open("example.txt", "r") as file:
+    content = file.read()
+    print("File Content:\n", content)
+
+# Appending data to a file
+with open("example.txt", "a") as file:
+    file.write("Appending a new line to the file.\n")
+
+# Reading line by line
+with open("example.txt", "r") as file:
+    for line in file:
+        print("Line:", line.strip())
+
+# Checking if file exists before reading (to avoid errors)
+import os
+if os.path.exists("example.txt"):
+    with open("example.txt", "r") as file:
+        print("Safely reading the file:\n", file.read())
+else:
+    print("File not found.")
+
+## Some important file handling methods
+# - read() → Reads entire file content
+# - readline() → Reads one line at a time
+# - readlines() → Reads all lines as a list
+# - write() → Writes data to the file
+# - append() → Adds data at the end of the file
+# - close() → Closes the file (automatically handled with 'with' statement)
+
+# Deleting a file
+if os.path.exists("example.txt"):
+    os.remove("example.txt")
+    print("File deleted successfully!")
+else:
+    print("File does not exist.")
 
 
 
