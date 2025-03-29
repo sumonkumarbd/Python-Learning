@@ -485,7 +485,8 @@ if os.path.exists("parent_dir"):
 
 print("Directory operations completed successfully!")
 
-""" #Multiple Comment Finnished
+
+
 
 ### Zip File Handling ###
 ## Characteristics of Zip File Handling
@@ -542,6 +543,47 @@ if not os.path.exists(dir_name):
 
 # Creating a zip archive of the entire directory
 shutil.make_archive("new", "zip", dir_name)  # Compresses 'my_directory' into 'new.zip'
+
+""" #Multiple Comment Finnished
+
+### CSV File Handling ###
+import csv
+### CSV File Handling ###
+## Characteristics of CSV File Handling
+# - Stores data in a comma-separated format (CSV)
+# - Useful for handling tabular data
+# - Easily readable by both humans and programs
+# - Supports efficient data import/export
+
+import csv
+
+# Sample data as a list of lists (Rows for CSV)
+data = [
+    ["ID", "Name", "Age", "City"],  # Header row
+    [1, "Sumon", 29, "Dhaka"],
+    [2, "Bristi", 23, "Chittagong"],
+    [3, "Tania", 18, "Khulna"],
+    [4, "Leo", 32, "Barisal"],
+    [5, "Puti", 27, "Sylhet"],
+    [6, "Minu", 30, "Rajshahi"],
+    [7, "Khushi", 25, "Rangpur"]
+]
+
+# Writing data to a CSV file
+with open("demo_CSV.csv","w",newline="",encoding="utf-8") as myCSV:
+    writer = csv.writer(myCSV)
+    writer.writerows(data)
+    print("CSV file Created Successfully")
+
+# # Reading data from the CSV file
+# with open("demo_data.csv", "r", encoding="utf-8") as csvFile:
+#     reader = csv.reader(csvFile)
+#     for row in reader:
+#         print(row)  # Prints each row
+
+
+
+
 
 
 
