@@ -544,7 +544,6 @@ if not os.path.exists(dir_name):
 # Creating a zip archive of the entire directory
 shutil.make_archive("new", "zip", dir_name)  # Compresses 'my_directory' into 'new.zip'
 
-""" #Multiple Comment Finnished
 
 ### CSV File Handling ###
 import csv
@@ -579,6 +578,47 @@ with open("demo_CSV.csv","r") as myCSV:
     reader = csv.reader(myCSV)
     for row in reader:
         print(row)
+
+""" #Multiple Comment Finnished
+
+
+### Exception Handling ###
+## Characteristics of Exception Handling
+# - Prevents program crashes due to unexpected errors
+# - Uses try-except blocks to catch exceptions
+# - Helps in debugging and error logging
+# - Allows graceful program termination
+# - Can handle multiple exception types
+
+try:
+    # User input
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    # Attempting division (may cause ZeroDivisionError)
+    result = num1 / num2
+
+    # Writing to a file (may cause FileNotFoundError)
+    with open("output.txt", "w") as file:
+        file.write(f"Result: {result}")
+
+    print("Operation successful!")
+
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed!")
+
+except ValueError:
+    print("Error: Invalid input! Please enter numeric values.")
+
+except FileNotFoundError:
+    print("Error: The file could not be found!")
+
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+finally:
+    print("Execution completed!")  # This runs regardless of an exception
+
 
 
 
