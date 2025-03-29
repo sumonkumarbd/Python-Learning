@@ -555,7 +555,6 @@ import csv
 # - Easily readable by both humans and programs
 # - Supports efficient data import/export
 
-import csv
 
 # Sample data as a list of lists (Rows for CSV)
 data = [
@@ -575,11 +574,11 @@ with open("demo_CSV.csv","w",newline="",encoding="utf-8") as myCSV:
     writer.writerows(data)
     print("CSV file Created Successfully")
 
-# # Reading data from the CSV file
-# with open("demo_data.csv", "r", encoding="utf-8") as csvFile:
-#     reader = csv.reader(csvFile)
-#     for row in reader:
-#         print(row)  # Prints each row
+# Reading data from the CSV file
+with open("demo_CSV.csv","r") as myCSV:
+    reader = csv.reader(myCSV)
+    for row in reader:
+        print(row)
 
 
 
