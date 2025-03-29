@@ -579,8 +579,6 @@ with open("demo_CSV.csv","r") as myCSV:
     for row in reader:
         print(row)
 
-""" #Multiple Comment Finnished
-
 
 ### Exception Handling ###
 ## Characteristics of Exception Handling
@@ -618,6 +616,57 @@ except Exception as e:
 
 finally:
     print("Execution completed!")  # This runs regardless of an exception
+
+""" #Multiple Comment Finnished
+
+### JSON File Handling ###
+## Characteristics of JSON
+# - Stores data in key-value pairs (similar to Python dictionaries)
+# - Supports structured and hierarchical data
+# - Lightweight and human-readable
+# - Used for data interchange (e.g., APIs, config files)
+# - Compatible with multiple programming languages
+
+import json
+
+# Sample data (Python dictionary)
+data = {
+    "employees": [
+        {"ID": 1, "Name": "Sumon", "Age": 29, "City": "Dhaka"},
+        {"ID": 2, "Name": "Bristi", "Age": 23, "City": "Chittagong"},
+        {"ID": 3, "Name": "Tania", "Age": 18, "City": "Khulna"},
+        {"ID": 4, "Name": "Leo", "Age": 32, "City": "Barisal"}
+    ]
+}
+
+#python Object -> JSON String
+employeesJSON = json.dumps(data, indent=4)
+# print(employeesJSON)
+
+# Json String -> Python Object
+pcJSON = '{"Motherboard":"MSI", "Proccesor":"Ryzen","SSD":"Ntac","RAM":"PNY"}'
+pcObj = json.loads(pcJSON)
+# print(pcObj["SSD"])
+
+
+with open("data.json","w",encoding="utf-8") as json_file:
+    json_file.write(employeesJSON)
+
+
+with open("data.json","r") as readJson :
+    jsonS = json.load(readJson)
+    jsonS = json.dumps(jsonS,indent=4)
+    print(jsonS)
+
+
+
+
+
+
+
+
+
+
 
 
 
