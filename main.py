@@ -224,7 +224,6 @@ cities_part2 = ["Berlin", "Tokyo", "Beijing", "Dhaka", "Mumbai", "Delhi", "Sydne
 # print(slice_list)
 print(cities_part1)
 
-""" #Multiple Comment Finnished
 
 ### Tuples ###
 ## Charecterstick of List
@@ -242,6 +241,39 @@ print(nubers[5:6]) #Slice in tuples
 for number in nubers:
     print(number)
 
+""" #Multiple Comment Finnished
 
+### Set ###
+##Charectersticks of set
+# - Unorder
+# - Mutable
+# - Avoid Duplicate value
+# - Heterogeneous
+# - Dianamic size
+
+
+nameSet = {"Sumon","Bristi","Tania","Leo"}
+ageSet = {29,23,18,.2}
+nameSet.add("Puti")
+nameSet.update(["Minu","Khushi"])
+nameSet.remove("Tania")
+print(nameSet)
+
+newSet = nameSet.union(ageSet)
+print(newSet)
+
+##Some method for higher math
+# - intersection()
+# - differnce()
+# - issubset()
+# - issuperset
+
+
+
+for eachName in nameSet:
+    print(eachName)
+
+
+print(len(nameSet))
 
 
