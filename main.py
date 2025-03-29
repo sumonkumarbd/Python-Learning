@@ -241,7 +241,6 @@ print(nubers[5:6]) #Slice in tuples
 for number in nubers:
     print(number)
 
-""" #Multiple Comment Finnished
 
 ### Set ###
 ##Charectersticks of set
@@ -275,5 +274,43 @@ for eachName in nameSet:
 
 
 print(len(nameSet))
+
+""" #Multiple Comment Finnished
+
+### Dictionary ###
+## Characteristics of Dictionary
+# - Key-Value Pair
+# - Unordered (Python 3.6 and below), Ordered (Python 3.7+)
+# - Mutable
+# - Avoids Duplicate Keys
+# - Heterogeneous
+# - Dynamic Size
+
+personDict = {"name": "Sumon", "age": 29, "city": "Dhaka"}
+contactDict = {"email": "sumon@example.com", "phone": "123456789"}
+
+personDict["gender"] = "Male"  # Adding a new key-value pair
+personDict.update({"profession": "Developer", "country": "Bangladesh"})  # Updating multiple keys
+personDict.pop("city")  # Removing a key-value pair
+
+print(personDict)
+
+newDict = personDict.copy()  # Creating a copy
+newDict.update(contactDict)  # Merging two dictionaries
+print(newDict)
+
+## Some useful methods for dictionary
+# - keys()
+# - values()
+# - items()
+# - get()
+# - pop()
+# - clear()
+
+for key, value in personDict.items():
+    print(f"{key}: {value}")
+
+print(len(personDict))  # Number of key-value pairs
+
 
 
