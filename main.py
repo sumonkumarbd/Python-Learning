@@ -368,6 +368,9 @@ print_info(name="Bristi", age=23, city="Dhaka")
 square = lambda x: x * x
 print(square(6))  # Output: 36
 
+mylamFunc = lambda num,num2: num * num2
+print(mylamFunc(2,3)) # Output: 6
+
 # Recursive function
 def factorial(n):
     if n == 0:
