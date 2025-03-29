@@ -181,7 +181,6 @@ print(a < b)    # Less than         → True
 print(a >= b)   # Greater than or equal to → False
 print(a <= b)   # Less than or equal to   → True
 
-""" #Multiple Comment Finnished
 
 ### List ###
 ## Charecterstick of List
@@ -224,7 +223,24 @@ cities_part2 = ["Berlin", "Tokyo", "Beijing", "Dhaka", "Mumbai", "Delhi", "Sydne
 # slice_list = cities_part1[2:5]
 # print(slice_list)
 print(cities_part1)
-# print(cities_part1)
+
+""" #Multiple Comment Finnished
+
+### Tuples ###
+## Charecterstick of List
+# - Order
+# - Imutuble
+# - Allow Duplicates
+# - Heterogeneous
+# - Fixed Size
+
+nubers = (1,2,5,8,6,11,44, 1,757,45)
+print(nubers.index(45)) # represent of index number
+print(nubers.count(1)) # duplicate value count
+print(nubers[5:6]) #Slice in tuples
+#loop in tupuls
+for number in nubers:
+    print(number)
 
 
 
