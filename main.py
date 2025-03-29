@@ -430,9 +430,10 @@ if os.path.exists("example.txt"):
 else:
     print("File does not exist.")
 
-""" #Multiple Comment Finnished
 
-### Directory Handling ###
+
+
+    ### Directory Handling ###
 ## Characteristics of Directory Handling
 # - Helps in Managing Files and Folders
 # - Supports Creating, Renaming, and Deleting Directories
@@ -483,6 +484,70 @@ if os.path.exists("parent_dir"):
 # - shutil.rmtree() → Removes a directory and all its contents
 
 print("Directory operations completed successfully!")
+
+""" #Multiple Comment Finnished
+
+### Zip File Handling ###
+## Characteristics of Zip File Handling
+# - Compress multiple files into a single archive
+# - Supports both writing and extracting files
+# - Useful for reducing file size and organizing data
+# - Provides fast access to compressed files
+# - Helps in efficient file storage and transfer
+
+import zipfile
+import os
+import shutil
+
+# Creating a zip file
+with zipfile.ZipFile("new.zip", "w") as zip:
+    print("Zip file is Created!")  # Confirms that the zip file has been created
+
+# Creating 5 text files dynamically
+for i in range(5):
+    file_name = f"myfile{i}.txt"
+    with open(file_name, "w") as myFile:
+        print(myFile)  # Printing file object (for debugging)
+        print(myFile)  # Unnecessary duplicate print (can be removed)
+
+# Writing files into the zip archive
+with zipfile.ZipFile("new.zip", "w") as myZip:
+    for i in range(5):
+        file_name = f"myfile{i}.txt"
+        myZip.write(file_name)  # Adds each file to the zip archive
+
+# Extracting all files from the zip archive
+with zipfile.ZipFile("new.zip", "r") as myZip:
+    myZip.extractall()  # Extracts all files in the current directory
+    extracted_files = myZip.namelist()  # Lists extracted files
+    print(extracted_files)  # Prints the list of extracted files
+
+# Creating a directory if it doesn't exist
+dir_name = "my_directory"
+if not os.path.exists(dir_name):
+    os.mkdir(dir_name)  # Creates the directory
+
+    # Creating and writing to files inside the directory
+    for i in range(3):
+        file_name = f"myfile{i}.txt"
+
+        # Creating the file (w mode creates an empty file)
+        with open(os.path.join(dir_name, file_name), "w"):
+            fileList = os.listdir(dir_name)
+            print(fileList)  # Prints files in the directory
+
+        # Appending text to the file
+        with open(os.path.join(dir_name, file_name), "a") as wFile:
+            wFile.write(f"SL no: {i} Hello, this is written dynamically from the program.\n")
+
+# Creating a zip archive of the entire directory
+shutil.make_archive("new", "zip", dir_name)  # Compresses 'my_directory' into 'new.zip'
+
+
+
+
+
+
 
 
 
