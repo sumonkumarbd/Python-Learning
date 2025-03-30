@@ -700,24 +700,33 @@ print("Converted Date Object:", date_obj)
 weekday_name = now.strftime("%A")  # Full weekday name (e.g., Monday)
 print("Today is:", weekday_name)
 
+
+
 """ #Multiple Comment Finnished
 
+
+### Class ###
 class Myclass:
 
     x = 10
     y = 5
     z = 30
 
-    def funcSum(self,a,b):
-        sum = self.x+self.y+self.z+a+b
+    def __init__(self) -> None:
+        self.x = 10
+        self.y = 20
+        self.z = 10
+
+
+    def funcSum(self):
+        sum = self.x+self.y+self.z
         print(sum)
 
 obj1 = Myclass()
 
 
 
-obj1.funcSum(10,20)
-
+obj1.funcSum()
 
 
 
