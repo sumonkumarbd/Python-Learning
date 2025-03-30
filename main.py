@@ -722,11 +722,19 @@ class Myclass:
         sum = self.x+self.y+self.z
         print(sum)
 
+
+    @staticmethod
+    def myStaticM():
+       multiply = Myclass.x * Myclass.y
+       print(multiply)
+
 obj1 = Myclass()
 
 
 
 obj1.funcSum()
+Myclass.myStaticM()
+print(Myclass.x)
 
 
 
