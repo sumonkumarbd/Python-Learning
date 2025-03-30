@@ -659,7 +659,6 @@ with open("data.json","r") as readJson :
     jsonS = json.dumps(jsonS,indent=4)
     print(jsonS)
 
-""" #Multiple Comment Finnished
 
 ### Date & Time Handling ###
 ## Characteristics of Date & Time Handling
@@ -701,10 +700,23 @@ print("Converted Date Object:", date_obj)
 weekday_name = now.strftime("%A")  # Full weekday name (e.g., Monday)
 print("Today is:", weekday_name)
 
+""" #Multiple Comment Finnished
+
+class Myclass:
+
+    x = 10
+    y = 5
+    z = 30
+
+    def funcSum(self,a,b):
+        sum = self.x+self.y+self.z+a+b
+        print(sum)
+
+obj1 = Myclass()
 
 
 
-
+obj1.funcSum(10,20)
 
 
 
