@@ -704,41 +704,43 @@ print("Today is:", weekday_name)
 
 """ #Multiple Comment Finnished
 
-
 ### Class ###
-class Myclass:
+class Father:
+    personalInfo = {
+        "name" : "Bablu Sardar",
+        "age": 52,
+        "weight": 82,
+        "height" : "5'6"
+    }
 
-    x = 10
-    y = 5
-    z = 30
+    properties = {
+        "land": True,
+        "home": True,
+        "car" : True,
+        "bankBalance": 500000
+    }
 
     def __init__(self) -> None:
-        self.x = 10
-        self.y = 20
-        self.z = 10
+        pass
 
 
-    def funcSum(self):
-        sum = self.x+self.y+self.z
-        print(sum)
+class Son(Father):
+    son_BankBalance = 150000
+
+    def sonsProperties(self):
+        print("Father's Properties is: ")
+        for i in self.properties.keys():
+            print(f"{i} : {self.properties[i]}")
 
 
-    @staticmethod
-    def myStaticM():
-       multiply = Myclass.x * Myclass.y
-       print(multiply)
+    def son_TotalB(self):
+        dad_intBalance = int(self.properties["bankBalance"])
+        son_intBalance = int(self.son_BankBalance)
+        return dad_intBalance + son_intBalance
 
-obj1 = Myclass()
-
-
-
-obj1.funcSum()
-Myclass.myStaticM()
-print(Myclass.x)
-
-
-
-
+son = Son()
+son.sonsProperties()
+print(f"Son's Current Balance is: {son.son_TotalB()} Taka Only")
 
 
 
