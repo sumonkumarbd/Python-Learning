@@ -700,11 +700,7 @@ print("Converted Date Object:", date_obj)
 weekday_name = now.strftime("%A")  # Full weekday name (e.g., Monday)
 print("Today is:", weekday_name)
 
-
-
-""" #Multiple Comment Finnished
-
-### Class ###
+### OPP Method Overriding ###
 class Father:
     personalInfo = {
         "name" : "Bablu Sardar",
@@ -741,6 +737,44 @@ class Son(Father):
 son = Son()
 son.sonsProperties()
 print(f"Son's Current Balance is: {son.son_TotalB()} Taka Only")
+
+
+
+""" #Multiple Comment Finnished
+
+### Abstract Method
+from abc import ABC,abstractmethod
+
+class Bangladesh(ABC):
+
+    @abstractmethod
+    def print20to30(self):
+       pass
+
+    @abstractmethod
+    def print0to10(self):
+        pass
+
+
+class Dhaka(Bangladesh):
+    def print20to30(self):
+        for i in range(31):
+            print(i)
+
+
+    def print0to10(self):
+        for i in range(11):
+            print(i)
+
+
+dh = Dhaka()
+
+dh.print20to30()
+
+
+
+
+
 
 
 
