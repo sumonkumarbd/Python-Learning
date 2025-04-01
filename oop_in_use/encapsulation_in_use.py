@@ -31,4 +31,4 @@ class BankAccount:
 bankAccount = BankAccount()
 bankAccount.deposit(2000)
 bankAccount.withdraw(1500)
-print(bankAccount.balance_check())
+# print(bankAccount.balance_check())
