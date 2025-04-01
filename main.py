@@ -738,10 +738,6 @@ son = Son()
 son.sonsProperties()
 print(f"Son's Current Balance is: {son.son_TotalB()} Taka Only")
 
-
-
-""" #Multiple Comment Finnished
-
 ### Abstract Method
 from abc import ABC,abstractmethod
 
@@ -770,6 +766,51 @@ class Dhaka(Bangladesh):
 dh = Dhaka()
 
 dh.print20to30()
+
+
+
+
+### Method OverLoading ###
+class Overloading_class:
+
+    def overLoadingwithDefult(self, a=0, b=0, c=0, d=0): #for Default Value
+        print(a+b)
+        print(a+c)
+        print(a+d)
+
+
+
+    def overLoadingM(self,*a): #for Variable Lenth
+        print(a)
+
+
+
+
+overLoadingOBJ = Overloading_class()
+
+overLoadingOBJ.overLoadingM(10,20,20,10,30,22,115,1154,1454,4646,4646,411,2121,124,46,455)
+overLoadingOBJ.overLoadingwithDefult(1)
+overLoadingOBJ.overLoadingwithDefult(2,20,30,40)
+
+""" #Multiple Comment Finnished
+
+
+### Access Modifier ###
+
+class Bank:
+    bank_name = "Pyhon Bank LTD."
+    branch = "Cyber World"
+    _total_user = 215
+    __total_balance = 250000
+
+
+
+
+class MyBank(Bank):
+    def bank_details(self):
+        print(self.bank_name)
+        print(self.branch)
+
 
 
 
