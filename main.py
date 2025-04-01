@@ -792,32 +792,101 @@ overLoadingOBJ.overLoadingM(10,20,20,10,30,22,115,1154,1454,4646,4646,411,2121,1
 overLoadingOBJ.overLoadingwithDefult(1)
 overLoadingOBJ.overLoadingwithDefult(2,20,30,40)
 
-""" #Multiple Comment Finnished
 
 
 ### Access Modifier ###
 
 class Bank:
-    bank_name = "Pyhon Bank LTD."
-    branch = "Cyber World"
-    _total_user = 215
-    __total_balance = 250000
+    bank_name = "Pyhon Bank LTD." #public
+    branch = "Cyber World"  #public
+    _total_user = 215   #protected
+    __total_balance = 250000 #privet
 
 
 
 
 class MyBank(Bank):
     def bank_details(self):
-        print(self.bank_name)
-        print(self.branch)
+        print(self.bank_name)   #Output: Pyhon Bank LTD.
+        print(self.branch)  #Output: Cyber World
+        print(self._total_user) #Output: 215
+        print(self.__total_balance) # Output: Nothing...
+
+
+
+myBankObj = MyBank()
+myBankObj.bank_details()
 
 
 
 
+### Getter & Setter ###
+
+class Bank:
+    bank_name = "Pyhon Bank LTD." #public
+    branch = "Cyber World"  #public
+    _total_user = 215   #protected
+    __total_balance = 250000 #privete
+
+
+    @property
+    def TotalBalance(self):    #  __total_balance getter
+        return self.__total_balance
+
+
+    @TotalBalance.setter
+    def TotalBalance(self,value):
+        self.__total_balance = value
+
+class MyBank(Bank):
+    def bank_details(self):
+        print(self.bank_name)   #Output: Pyhon Bank LTD.
+        print(self.branch)  #Output: Cyber World
+        print(self._total_user) #Output: 215
+        print(self.__total_balance) # Output: Nothing...
 
 
 
+bank = Bank()
+print(bank.TotalBalance) #using Getter
+print(bank.TotalBalance + 600000) #Using Setter
+myBankObj = MyBank()
+myBankObj.bank_details()
 
+
+""" #Multiple Comment Finnished
+
+### Encapsulation ###
+
+class BankAccount:
+    __Balance = 0
+
+    #deposit
+    def deposit(self,amount):
+        if amount >= 0:
+            self.__Balance += amount
+            print(f"Your Amount ${amount} is successfully Deposited!\nYour current balance is ${self.__Balance}, Thank you.")
+
+        else: print("Invalid Amount! Please Try with a valid Amount.")
+
+    
+    #Withdraw
+    def withdraw(self,amount):
+        if amount > 0 and amount <= self.__Balance:
+            self.__Balance -= amount
+            print(f"Your withdraw request amount ${amount} has been successfully procced.\nYour current balance is ${self.__Balance}, Thank you.")
+
+
+    #Balance Check
+    def balance_check(self):
+        return f"Your current balance is ${self.__Balance}, Thank you."
+
+
+
+bankAccount = BankAccount()
+bankAccount.deposit(2000)
+bankAccount.withdraw(500)
+print(bankAccount.balance_check())
 
 
 
