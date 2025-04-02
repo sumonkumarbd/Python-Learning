@@ -15,7 +15,7 @@ from oop_in_use import method_overloading
 from oop_in_use import access_modifier
 from oop_in_use import getter_setter
 from oop_in_use import encapsulation_in_use
-from python_modules import http_module
+import python_modules # my own-made package
 
 ###Oparator Prsidence###
 #Exponentiation (**)
@@ -27,7 +27,9 @@ from python_modules import http_module
 #Logical Not (not) -> Loagical AND (and) -> Logical OR (or)
 
 
-
+# python_modules.clientReq()
+print(python_modules.version())
+print(python_modules.author())
 
 
 
